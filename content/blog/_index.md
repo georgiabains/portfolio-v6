@@ -1,5 +1,5 @@
 +++
-title = "Blog - Georgia Bains"
+title = "Blog"
 description = "Blog"
 sort_by = "date"
 template = "blog.html"

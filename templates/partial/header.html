@@ -1,0 +1,15 @@
+<header>
+  <h1><a href="{{ get_url(path='/') | safe }}">{{ config.title }}</a></h1>
+
+  <nav>
+    <a
+      {% if current_path == '/about/' %}aria-current="page"{% endif %}
+      href="{{ get_url(path='@/about.md', trailing_slash=false) | safe }}"
+    >About</a>
+
+    <a 
+      {% if current_path == '/blog/' %}aria-current="page"{% endif %}
+      href="{{ get_url(path='@/blog/_index.md') }}"
+    >Blog</a>
+  </nav>
+</header>

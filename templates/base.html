@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% block head %}
+    <meta charset="utf-8">
+    {% if page.title %}
+      {% set title = page.title ~ " - Georgia Bains" %}
+    {% elif section.title %}
+      {% set title = section.title ~ " - Georgia Bains" %}
+    {% elif config.title %}
+      {% set title = config.title %}
+    {% else %}
+      {% set title = "Georgia Bains" %}
+    {% endif %}
+    <title>{{ title }}</title>
+
+    {% block css %}
+      <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/base.css', trailing_slash=false) | safe }}" />
+    {% endblock css %}
+
+    <script>
+      /* Prevent Firefox FOUC */
+      let FF_FOUC_FIX;
+    </script>
+  {% endblock head %}
+</head>
+
+<body>
+  {% include "partial/header.html" %}
+
+  <main>
+    {% block content %} {% endblock %}
+  </main>
+
+  {% include "partial/footer.html" %}
+</body>
+</html>
