@@ -4,6 +4,76 @@
 
 html,
 body {
+  background-color: var(--background);
+  font-size: 1em;
   margin: 0;
   padding: 0;
+}
+
+body {
+  color: var(--text-paragraph);
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: 400;
+  line-height: var(--line-default);
+}
+
+a {
+  border-bottom: 2px solid var(--text-link);
+  color: var(--text-link);
+  text-decoration: none;
+  
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid var(--text-paragraph);
+    color: var(--text-paragraph);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-heading);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block-end: var(--spacing-m);
+  margin-block-start: var(--spacing-s);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.4;
+}
+
+strong {
+  color: var(--text-paragraph-emphasis);
+  font-weight: 700;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+svg {
+  fill: currentColor;
+}
+
+pre {
+  /* Use custom background colour */
+  background-color: var(--color-primary-9) !important;
+  border-radius: var(--border-radius-s);
+  padding: var(--spacing-m) var(--spacing-l);
 }

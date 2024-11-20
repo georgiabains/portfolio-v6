@@ -1,0 +1,7 @@
+header {
+  margin-block: var(--spacing-2xl);
+
+  h1 {
+    margin: 0;
+  }
+}

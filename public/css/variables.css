@@ -4,7 +4,7 @@
  * All pixel calculations assume 1em = 16px.
  */
 
- :root {
+:root {
   /**
    * Border radii.
    */
@@ -19,7 +19,7 @@
 
   /* neutral - black through white */
   --color-neutral-0: #f8f8f8;
-  --color-neutral-1: #E8E8E8;
+  --color-neutral-1: #e8e8e8;
   --color-neutral-2: #cccccc;
   --color-neutral-3: #b0b0b0;
   --color-neutral-4: #636363;
@@ -30,28 +30,28 @@
   --color-neutral-9: #0f0f0f;
 
   /* green - primary */
-  --color-primary-0: #F5F7F1;
-  --color-primary-1: #E3EAE0;
-  --color-primary-2: #C0D1BA;
-  --color-primary-3: #9EB895;
-  --color-primary-4: #64745E;
-  --color-primary-5: #4C5848;
-  --color-primary-6: #353E32;
-  --color-primary-7: #20251E;
+  --color-primary-0: #f5f7f1;
+  --color-primary-1: #e3eae0;
+  --color-primary-2: #c0d1ba;
+  --color-primary-3: #9eb895;
+  --color-primary-4: #64745e;
+  --color-primary-5: #4c5848;
+  --color-primary-6: #353e32;
+  --color-primary-7: #20251e;
   --color-primary-8: #141713;
-  --color-primary-9: #0D100D;
+  --color-primary-9: #0d100d;
 
   /* purple - accent */
-  --color-accent-0: #F8F8F9;
-  --color-accent-1: #E9E7EC;
-  --color-accent-2: #CFCAD4;
-  --color-accent-3: #B5AEBD;
-  --color-accent-4: #786A86;
-  --color-accent-5: #5B5166;
+  --color-accent-0: #f8f8f9;
+  --color-accent-1: #e9e7ec;
+  --color-accent-2: #cfcad4;
+  --color-accent-3: #b5aebd;
+  --color-accent-4: #786a86;
+  --color-accent-5: #5b5166;
   --color-accent-6: #403847;
-  --color-accent-7: #26222B;
-  --color-accent-8: #18151B;
-  --color-accent-9: #100E12;
+  --color-accent-7: #26222b;
+  --color-accent-8: #18151b;
+  --color-accent-9: #100e12;
 
   /**
    * Colours - light mode.
@@ -117,7 +117,6 @@
    * Media queries.
    */
   @media screen and (min-width: 1024px) {
-
     /**
      * Text sizes.
      */
@@ -128,7 +127,7 @@
 /**
  * Colours - dark mode.
  */
-html[data-theme=dark],
+html[data-theme="dark"],
 html[data-theme="dark system"] {
   --background: var(--color-primary-8);
   --background-on-hover: var(--color-primary-1);
@@ -141,6 +140,27 @@ html[data-theme="dark system"] {
   --text-paragraph: var(--color-neutral-1);
   --text-paragraph-emphasis: var(--color-neutral-0);
   --text-paragraph-data: var(--color-neutral-4);
+
+  /* img {
+    filter: brightness(75%);
+  } */
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--color-primary-8);
+    --background-on-hover: var(--color-primary-1);
+    --background-on-hover-shade: var(--color-primary-9);
+    --background-raised: var(--color-primary-9);
+
+    --text-heading: var(--color-neutral-2);
+    --text-inverse: var(--color-primary-9);
+    --text-link: var(--color-primary-1);
+    --text-paragraph: var(--color-neutral-1);
+    --text-paragraph-emphasis: var(--color-neutral-0);
+    --text-paragraph-data: var(--color-neutral-4);
+  }
 
   img {
     filter: brightness(75%);

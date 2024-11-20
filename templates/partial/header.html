@@ -4,18 +4,24 @@
 
   Renders global semantic <header> element with navigation links.
 #}
-<header>
-  <h1><a href="{{ get_url(path='/') | safe }}">{{ config.title }}</a></h1>
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/header.css', trailing_slash=false) | safe }}" />
+{% endblock css%}
 
-  <nav>
-    <a
-      {% if current_path == '/about/' %}aria-current="page"{% endif %}
-      href="{{ get_url(path='@/about.md', trailing_slash=false) | safe }}"
-    >About</a>
+<header class="container">
+  <div class="header__row">
+    <h1><a href="{{ get_url(path='/') | safe }}">{{ config.title }}</a></h1>
 
-    <a 
-      {% if current_path == '/blog/' %}aria-current="page"{% endif %}
-      href="{{ get_url(path='@/blog/_index.md') }}"
-    >Blog</a>
-  </nav>
+    <nav>
+      <a
+        {% if current_path == '/about/' %}aria-current="page"{% endif %}
+        href="{{ get_url(path='@/about.md', trailing_slash=false) | safe }}"
+      >About</a>
+
+      <a 
+        {% if current_path == '/blog/' %}aria-current="page"{% endif %}
+        href="{{ get_url(path='@/blog/_index.md') }}"
+      >Blog</a>
+    </nav>
+  </div>
 </header>

@@ -3,7 +3,11 @@
 
   Renders global semantic <footer> element.
 #}
-<footer>
-  <p>Built on <a href="https://www.getzola.org/">Zola</a>.</p>
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/footer.css', trailing_slash=false) | safe }}" />
+{% endblock css%}
+
+<footer class="container">
+  <p>Built on <a href="https://www.getzola.org/">Zola</a>. Syntax highlighting is <a href="https://github.com/mjio/boron.tmtheme">Boron</a> with a custom background colour.</p>
   <p>&#169; Georgia Bains {{ now() | date(format="%Y") }}</p>
 </footer>
