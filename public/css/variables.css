@@ -1,0 +1,148 @@
+/**
+ * Root properties.
+ *
+ * All pixel calculations assume 1em = 16px.
+ */
+
+ :root {
+  /**
+   * Border radii.
+   */
+  --border-radius-s: 0.25rem; /* 4px */
+  --border-radius-m: 0.5rem; /* 8px */
+  --border-radius-l: 1rem; /* 16px */
+
+  /**
+   * Colours.
+   * https:/*accessiblepalette.com/?lightness=97,92,82,72,47,36,25,14,7.5,4.3&a0ba97=0,0&786a86=0,0&0F0F0F=0,0
+   */
+
+  /* neutral - black through white */
+  --color-neutral-0: #f8f8f8;
+  --color-neutral-1: #E8E8E8;
+  --color-neutral-2: #cccccc;
+  --color-neutral-3: #b0b0b0;
+  --color-neutral-4: #636363;
+  --color-neutral-5: #4a4a4a;
+  --color-neutral-6: #424242;
+  --color-neutral-7: #262626;
+  --color-neutral-8: #171619;
+  --color-neutral-9: #0f0f0f;
+
+  /* green - primary */
+  --color-primary-0: #F5F7F1;
+  --color-primary-1: #E3EAE0;
+  --color-primary-2: #C0D1BA;
+  --color-primary-3: #9EB895;
+  --color-primary-4: #64745E;
+  --color-primary-5: #4C5848;
+  --color-primary-6: #353E32;
+  --color-primary-7: #20251E;
+  --color-primary-8: #141713;
+  --color-primary-9: #0D100D;
+
+  /* purple - accent */
+  --color-accent-0: #F8F8F9;
+  --color-accent-1: #E9E7EC;
+  --color-accent-2: #CFCAD4;
+  --color-accent-3: #B5AEBD;
+  --color-accent-4: #786A86;
+  --color-accent-5: #5B5166;
+  --color-accent-6: #403847;
+  --color-accent-7: #26222B;
+  --color-accent-8: #18151B;
+  --color-accent-9: #100E12;
+
+  /**
+   * Colours - light mode.
+   */
+  --background: var(--color-primary-0);
+  --background-on-hover: var(--color-primary-6);
+  --background-on-hover-shade: var(--color-primary-1);
+  --background-raised: var(--color-primary-1);
+
+  /* only use against --background */
+  --text-heading: var(--color-neutral-7);
+  --text-inverse: var(--color-primary-0); /* mainly used in hover states  */
+  --text-link: var(--color-primary-6);
+  --text-paragraph: var(--color-neutral-8);
+  --text-paragraph-emphasis: var(--color-neutral-9);
+  --text-paragraph-data: var(--color-neutral-6);
+
+  /**
+   * Text sizes.
+   */
+  --text-base: 1rem; /* 16px */
+  --typescale-ratio: 1.333; /* Perfect fourth */
+
+  --text-xs: calc(var(--text-base) / var(--typescale-ratio));
+  --text-s: var(--text-base);
+  --text-m: calc(var(--text-s) * var(--typescale-ratio));
+  --text-l: calc(var(--text-m) * var(--typescale-ratio));
+  --text-xl: calc(var(--text-l) * var(--typescale-ratio));
+
+  /**
+   * Icon sizes.
+   */
+  --icon-xs: 0.5rem; /* 8px */
+  --icon-s: 1rem; /* 16px */
+  --icon-m: 1.5rem; /* 24px */
+
+  /**
+   * Line heights.
+   */
+  --line-baseline: 100%;
+  --line-default: 1.5;
+
+  /**
+   * Spacing.
+   */
+  --spacing-3xs: 0.125rem; /* 2px */
+  --spacing-2xs: 0.25rem; /* 4px */
+  --spacing-xs: 0.5rem; /* 8px */
+  --spacing-s: 0.75rem; /* 12px */
+  --spacing-m: 1rem; /* 16px */
+  --spacing-l: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-2xl: 2.5rem; /* 40px */
+  --spacing-3xl: 3rem; /* 48px */
+  --spacing-4xl: 3.5rem; /* 56px */
+  --spacing-5xl: 4rem; /* 64px */
+  --spacing-6xl: 4.5rem; /* 72px */
+  --spacing-7xl: 5rem; /* 80px */
+  --spacing-8xl: 5.5rem; /* 88px */
+  --spacing-9xl: 6rem; /* 96px */
+
+  /**
+   * Media queries.
+   */
+  @media screen and (min-width: 1024px) {
+
+    /**
+     * Text sizes.
+     */
+    --text-base: 1.344rem; /* 21.5px */
+  }
+}
+
+/**
+ * Colours - dark mode.
+ */
+html[data-theme=dark],
+html[data-theme="dark system"] {
+  --background: var(--color-primary-8);
+  --background-on-hover: var(--color-primary-1);
+  --background-on-hover-shade: var(--color-primary-9);
+  --background-raised: var(--color-primary-9);
+
+  --text-heading: var(--color-neutral-2);
+  --text-inverse: var(--color-primary-9);
+  --text-link: var(--color-primary-1);
+  --text-paragraph: var(--color-neutral-1);
+  --text-paragraph-emphasis: var(--color-neutral-0);
+  --text-paragraph-data: var(--color-neutral-4);
+
+  img {
+    filter: brightness(75%);
+  }
+}

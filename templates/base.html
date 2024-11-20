@@ -21,6 +21,7 @@
     <title>{{ title }}</title>
 
     {% block css %}
+      <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/variables.css', trailing_slash=false) | safe }}" />
       <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/base.css', trailing_slash=false) | safe }}" />
     {% endblock css %}
 
