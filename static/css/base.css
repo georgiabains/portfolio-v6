@@ -17,6 +17,10 @@ body {
   line-height: var(--line-default);
 }
 
+p {
+  font-size: var(--text-s);
+}
+
 a {
   border-bottom: 2px solid var(--text-link);
   color: var(--text-link);

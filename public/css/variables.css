@@ -73,7 +73,7 @@
    * Text sizes.
    */
   --text-base: 1rem; /* 16px */
-  --typescale-ratio: 1.333; /* Perfect fourth */
+  --typescale-ratio: 1.25; /* Perfect fourth */
 
   --text-xs: calc(var(--text-base) / var(--typescale-ratio));
   --text-s: var(--text-base);
@@ -120,7 +120,7 @@
     /**
      * Text sizes.
      */
-    --text-base: 1.344rem; /* 21.5px */
+    --text-base: 1rem;
   }
 }
 
@@ -141,9 +141,9 @@ html[data-theme="dark system"] {
   --text-paragraph-emphasis: var(--color-neutral-0);
   --text-paragraph-data: var(--color-neutral-4);
 
-  /* img {
+  img {
     filter: brightness(75%);
-  } */
+  }
 }
 
 
