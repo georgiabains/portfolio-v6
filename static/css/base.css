@@ -23,14 +23,13 @@ p {
 }
 
 a {
-  border-bottom: 2px solid var(--text-link);
   color: var(--text-link);
-  text-decoration: none;
   
   &:hover,
   &:focus {
-    border-bottom: 2px solid var(--text-paragraph);
-    color: var(--text-paragraph);
+    background-color: var(--color-primary-2);
+    border-radius: var(--border-radius-s);
+    color: var(--text-link-hover);
   }
 }
 

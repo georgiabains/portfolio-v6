@@ -14,7 +14,7 @@
 
   /**
    * Colours.
-   * https:/*accessiblepalette.com/?lightness=97,92,82,72,47,36,25,14,7.5,4.3&a0ba97=0,0&786a86=0,0&0F0F0F=0,0
+   * https://accessiblepalette.com/?lightness=97,92,82,72,47,36,25,14,7.5,4.3&a0ba97=0,0&786a86=0,0&0F0F0F=0,0
    */
 
   /* neutral - black through white */
@@ -157,6 +157,7 @@ html[data-theme="dark system"] {
     --text-heading: var(--color-neutral-2);
     --text-inverse: var(--color-primary-9);
     --text-link: var(--color-primary-1);
+    --text-link-hover: var(--color-neutral-9);
     --text-paragraph: var(--color-neutral-1);
     --text-paragraph-emphasis: var(--color-neutral-0);
     --text-paragraph-data: var(--color-neutral-4);

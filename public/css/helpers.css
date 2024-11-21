@@ -45,3 +45,16 @@
     left: 0;
   }
 }
+
+a.bubble {
+  background-color: var(--color-primary-2);
+  border: 0;
+  border-radius: var(--border-radius-s);
+  color: var(--color-primary-9);
+  padding-inline: var(--spacing-2xs);
+
+  &:hover {
+    background-color: var(--color-primary-6);
+    color: var(--color-neutral-0);
+  }
+}
