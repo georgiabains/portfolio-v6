@@ -110,3 +110,8 @@ pre {
   padding: var(--spacing-m) var(--spacing-m);
   overflow-x: auto;
 }
+
+blockquote {
+  border-left: 4px solid var(--color-primary-3);
+  padding-inline-start: var(--spacing-m);
+}
