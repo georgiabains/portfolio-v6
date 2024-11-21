@@ -1,27 +1,59 @@
-{#
-  Template: Article
+{# Template: Article Renders article (blog post) page. #} {% extends "base.html"
+%} {% block css %} {{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ get_url(path='css/article.css', trailing_slash=false) | safe }}" />
+{% endblock css %} {% block content %}
+<article>
+  <header>
+    <h1 class="article__title">{{ page.title }}</h1>
 
-  Renders article (blog post) page.
-#}
-{% extends "base.html" %}
+    <p class="article__date">
+      Published <time pubdate datetime="{{ page.date }}">{{ page.date | date(format="%d %B %Y") }}</time>
+    </p>
+  </header>
 
-{% block css %}
-  {{ super() }}
-  <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/article.css', trailing_slash=false) | safe }}" />
-{% endblock css %}
+  <aside class="article__toc">
+    {% if page.toc %}
+    <h2>Table of contents</h2>
+    <ol>
+      {% for h2 in page.toc %}
+      <li>
+        <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+        {% if h2.children %}
+        <ol>
+          {% for h3 in h2.children %}
+          <li>
+            <a href="{{ h3.permalink | safe }}">{{ h3.title }}</a>
+            <ol>
+              {% for h4 in h3.children %}
+              <li>
+                <a href="{{ h4.permalink | safe }}">{{ h4.title }}</a>
+                <ol>
+                  {% for h5 in h4.children %}
+                  <li>
+                    <a href="{{ h5.permalink | safe }}">{{ h5.title }}</a>
+                    <ol>
+                      {% for h6 in h5.children %}
+                      <li>
+                        <a href="{{ h6.permalink | safe }}">{{ h6.title }}</a>
+                      </li>
+                      {% endfor %}
+                    </ol>
+                  </li>
+                  {% endfor %}
+                </ol>
+              </li>
+              {% endfor %}
+            </ol>
+          </li>
+          {% endfor %}
+        </ol>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+    {% endif %}
+  </aside>
 
-{% block content %}
-  <article>
-    <header>
-      <h1 class="article__title">
-        {{ page.title }}
-      </h1>
-
-      <p class="article__date">
-        Published <time datetime="{{ page.date }}">{{ page.date | date(format="%d %B %Y") }}</time>
-      </p>
-    </header>
-  
-    {{ page.content | safe }}
-  </article>
+  {{ page.content | safe }}
+</article>
 {% endblock content %}

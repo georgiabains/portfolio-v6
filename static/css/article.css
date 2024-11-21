@@ -14,3 +14,21 @@
 .article__date {
   font-size: var(--text-xs);
 }
+
+.article__toc {
+  margin-block: var(--spacing-l);
+
+  ol {
+    counter-reset: item;
+    padding-inline-start: var(--spacing-m);
+  }
+
+  li {
+    display: block
+  }
+
+  li:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item
+  }
+}
