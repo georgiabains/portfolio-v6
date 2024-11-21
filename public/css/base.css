@@ -17,6 +17,7 @@ body {
   line-height: var(--line-default);
 }
 
+li,
 p {
   font-size: var(--text-s);
 }
@@ -79,5 +80,7 @@ pre {
   /* Use custom background colour */
   background-color: var(--color-primary-9) !important;
   border-radius: var(--border-radius-s);
-  padding: var(--spacing-m) var(--spacing-l);
+  font-size: var(--text-xs);
+  padding: var(--spacing-m) var(--spacing-m);
+  overflow-x: auto;
 }
