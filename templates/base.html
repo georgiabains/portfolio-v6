@@ -21,6 +21,15 @@
     <title>{{ title }}</title>
 
     {% block css %}
+      <style>
+        @font-face {
+          font-display: swap;
+          font-family: "Atkinson Hyperlegible";
+          src:
+            local("Atkinson Hyperlegible"),
+            url("{{ get_url(path='fonts/atkinson-hyperlegible/AtkinsonHyperlegible-Regular.ttf', trailing_slash=false) | safe }}") format("truetype");
+        }
+      </style>
       <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/variables.css', trailing_slash=false) | safe }}" />
       <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/base.css', trailing_slash=false) | safe }}" />
       <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/helpers.css', trailing_slash=false) | safe }}" />
