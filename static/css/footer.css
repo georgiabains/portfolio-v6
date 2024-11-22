@@ -1,4 +1,4 @@
-footer {
+.footer {
   border-top: 2px solid var(--color-primary-5);
   margin-block: var(--spacing-2xl);
   padding-block-start: var(--spacing-2xs);
