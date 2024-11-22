@@ -2,6 +2,9 @@
 title = "Configuration"
 date = 2019-11-27
 
+[taxonomies]
+tagged = ["Accessibility", "HTML", "CSS"]
+
 [extra]
 excerpt = "Excerpt test. Let's make it a bit longer, enough to whet the appetite. After all, I'm going to be talking about so many interesting things."
 +++

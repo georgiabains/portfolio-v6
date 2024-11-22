@@ -1,7 +1,14 @@
-{# Template: Article Renders article (blog post) page. #} {% extends "base.html"
-%} {% block css %} {{ super() }}
-<link rel="stylesheet" type="text/css" href="{{ get_url(path='css/article.css', trailing_slash=false) | safe }}" />
-{% endblock css %} {% block content %}
+{# 
+  Template: Article Renders article (blog post) page. #} 
+  
+{% extends "base.html" %}
+
+{% block css %} 
+  {{ super() }}
+  <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/article.css', trailing_slash=false) | safe }}" />
+{% endblock css %} 
+
+{% block content %}
 <article>
   <header>
     <h1 class="article__title">{{ page.title }}</h1>
@@ -60,5 +67,18 @@
   </aside>
 
   {{ page.content | safe }}
+
+  <footer class="article__footer">
+    {% if page.taxonomies.tagged %}
+      <h2 class="h3">Tagged:</h2>
+      <ul class="list--flex list--unstyled tagged-list">
+        {% for tag in page.taxonomies.tagged %}
+        <li>
+          <a class="button outline" href="/tagged/{{ tag | slugify }}"># {{ tag }}</a>
+          {% endfor %}
+        </li>
+      </ul>
+    {% endif %}
+  </footer>
 </article>
 {% endblock content %}

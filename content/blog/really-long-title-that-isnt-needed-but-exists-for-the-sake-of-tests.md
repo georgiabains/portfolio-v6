@@ -2,6 +2,9 @@
 title = "Really long title that isn't needed but exists for the sake of tests"
 date = "2024-11-22"
 
+[taxonomies]
+tagged = ["Accessibility", "HTML", "CSS"]
+
 [extra]
 excerpt = "Here's a longish excerpt of the would be example. Honestly it's kind of nice to tap away at the keyboard on the couch like this."
 +++

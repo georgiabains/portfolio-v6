@@ -22,6 +22,12 @@
   margin-inline-start: 0;
 }
 
+.list--flex {
+  align-items: center;
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
 .list--unstyled {
   list-style: none;
   margin: 0;
@@ -37,6 +43,20 @@
 
   &:focus-visible {
     left: 0;
+  }
+}
+
+.button.outline {
+  color: var(--color-neutral-0);
+  border: 1px solid var(--color-primary-3);
+  border-radius: var(--border-radius-s);
+  padding: var(--spacing-3xs) var(--spacing-xs);
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--color-primary-3);
+    color: var(--text-link-hover);
+    
   }
 }
 

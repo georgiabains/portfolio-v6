@@ -1,10 +1,17 @@
 base_url = "https://georgiabains.com"
 title = "Georgia Bains"
 description = "TODO: Meta description"
+
 default_language = "en"
+author = "Georgia Bains"
+
 compile_sass = false
 minify_html = true
-author = "Georgia Bains"
+
+taxonomies = [
+  { name = "tagged", feed = true }
+]
+
 build_search_index = true
 generate_sitemap = true
 generate_robots_txt = true

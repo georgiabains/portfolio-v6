@@ -33,10 +33,10 @@
       {% set is_first_page = paginator.current_index == 1 %}
 
       <nav aria-label="Pagination" class="blog__pagination">
-        <ul class="list--unstyled blog__pagination-list">
+        <ul class="list--flex list--unstyled">
           {% if paginator.previous %}
             <li>
-              <a class="blog__pagination-link blog__pagination-arrow" href="{{ paginator.previous }}"> 
+              <a class="button outline blog__pagination-link blog__pagination-arrow" href="{{ paginator.previous }}"> 
                 {{ load_data(path='icons/arrow-left.svg', trailing_slash = false) | safe }}
                 Previous {{ page_label | safe }}
               </a>
@@ -46,7 +46,7 @@
           <li>
             <a 
               {% if paginator.current_index == 1 %}aria-current="page"{% endif %}
-              class="blog__pagination-link"
+              class="button outline blog__pagination-link"
               href="{{ paginator.first }}"
             >
               {{ page_label | safe }} 1
@@ -60,7 +60,7 @@
           {% if paginator.previous and paginator.current_index - 1 != 1 %}
            <li>
               <a 
-                class="blog__pagination-link"
+                class="button outline blog__pagination-link"
                 href="{{ paginator.previous }}"
               >
                 {{ page_label | safe }} {{ paginator.current_index - 1 }}
@@ -72,7 +72,7 @@
             <li>
               <a 
                 aria-current="page"
-                class="blog__pagination-link"
+                class="button outline blog__pagination-link"
                 href="{{ paginator.current_index }}"
               >
                 {{ page_label | safe }} {{ paginator.current_index }}
@@ -83,7 +83,7 @@
           {% if paginator.next and paginator.current_index +1 != paginator.number_pagers %}
             <li>
               <a 
-                class="blog__pagination-link"
+                class="button outline blog__pagination-link"
                 href="{{ paginator.next }}"
               >
                 {{ page_label | safe }} {{ paginator.current_index + 1 }}
@@ -98,7 +98,7 @@
           <li>
             <a 
               {% if paginator.current_index == paginator.number_pagers %}aria-current="page"{% endif %}
-              class="blog__pagination-link"
+              class="button outline blog__pagination-link"
               href="{{ paginator.last }}"
             >
               {{ page_label | safe }} {{ paginator.number_pagers }}
@@ -107,7 +107,7 @@
 
           {% if paginator.next %}
             <li>
-              <a class="blog__pagination-link blog__pagination-arrow" href="{{ paginator.next }}">
+              <a class="button outline blog__pagination-link blog__pagination-arrow" href="{{ paginator.next }}">
                 Next {{ page_label | safe }}
                 {{ load_data(path='icons/arrow-right.svg', trailing_slash = false) | safe }}
               </a>

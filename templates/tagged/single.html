@@ -1,0 +1,15 @@
+{% block content %}
+<h1>{{ term.name }}</h1>
+{% if paginator %}
+{% set pages = paginator.pages %}
+{% else %}
+{% set pages = term.pages %}
+{% endif %}
+<ul>
+{% for page in pages %}
+  <li>
+    <a href="{{ page.permalink | safe }}">{% if page.date %}{{ page.date }} - {% endif %}{{ page.title }}</a>
+  </li>
+{% endfor %}
+</ul>
+{%endblock content%}
