@@ -11,6 +11,11 @@
     </p>
   </header>
 
+  {% if page.extra %}
+    <p>{{ page.extra.excerpt }}</p>
+    <!-- more -->
+  {% endif %}
+
   <aside class="article__toc">
     {% if page.toc %}
     <h2>Table of contents</h2>
