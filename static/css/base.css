@@ -27,7 +27,7 @@ a {
   
   &:hover,
   &:focus {
-    background-color: var(--color-primary-2);
+    background-color: var(--color-primary-3);
     border-radius: var(--border-radius-s);
     color: var(--text-link-hover);
   }
@@ -65,29 +65,35 @@ h3 {
   line-height: 1.4;
 }
 
-h1 {
+h1,
+.h1 {
   font-size: var(--text-xl);
 }
 
-h2 {
+h2,
+.h2 {
   font-size: var(--text-l);
 }
 
-h3 {
+h3,
+.h3 {
   font-size: var(--text-m);
 }
 
-h4 {
+h4,
+.h4 {
   font-size: var(--text-s);
   font-weight: 700;
 }
 
-h5 {
+h5,
+.h5 {
   font-size: var(--text-s);
   font-style: italic;
 }
 
-h6 {
+h6,
+.h6 {
   font-size: var(--text-xs);
 }
 
