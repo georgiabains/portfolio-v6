@@ -53,10 +53,14 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  margin-block-end: var(--spacing-xs);
+  margin-block-start: var(--spacing-xl);
+}
+
 p {
+  margin-block-start: 0;
   margin-block-end: var(--spacing-m);
-  margin-block-start: var(--spacing-s);
 }
 
 h1,
