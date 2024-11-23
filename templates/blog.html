@@ -21,6 +21,18 @@
         <li>
           <a class="h2" href="{{ page.permalink | safe }}">{{ page.title }}</a>
           <p class="blog__meta">{{ page.date | date(format="%d %B %Y") }}</p>
+
+          {% if page.taxonomies.tagged %}
+            <p class="visually-hidden">Tagged</p>
+            <ul class="list--flex list--unstyled">
+              {% for tag in page.taxonomies.tagged %}
+                <li class="blog__tag">
+                  <a class="button outline" href="/tagged/{{ tag | slugify }}"># {{ tag }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+
           {% if page.extra %}
             <p class="blog__excerpt">{{ page.extra.excerpt }}</p>
           {% endif %}
