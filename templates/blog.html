@@ -19,7 +19,7 @@
     <ul class="blog__list list--unstyled">
       {% for page in paginator.pages %}
         <li>
-          <a class="h3" href="{{ page.permalink | safe }}">{{ page.title }}</a>
+          <a class="h2" href="{{ page.permalink | safe }}">{{ page.title }}</a>
           <p class="blog__meta">{{ page.date | date(format="%d %B %Y") }}</p>
           {% if page.extra %}
             <p class="blog__excerpt">{{ page.extra.excerpt }}</p>
