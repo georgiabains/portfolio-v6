@@ -71,12 +71,12 @@
   <footer class="article__footer">
     {% if page.taxonomies.tagged %}
       <h2 class="h3">Tagged:</h2>
-      <ul class="list--flex list--unstyled tagged-list">
+      <ul class="list--flex list--unstyled">
         {% for tag in page.taxonomies.tagged %}
-        <li>
-          <a class="button outline" href="/tagged/{{ tag | slugify }}"># {{ tag }}</a>
-          {% endfor %}
-        </li>
+          <li>
+            <a class="button outline" href="/tagged/{{ tag | slugify }}"># {{ tag }}</a>
+          </li>
+        {% endfor %}
       </ul>
     {% endif %}
   </footer>
