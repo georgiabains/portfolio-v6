@@ -16,7 +16,12 @@
     {% endif %}
 
     <{{ header_element }} class="h3 header__title">
-      <a href="{{ get_url(path='/') | safe }}">{{ config.title }}</a>
+      {% set image = resize_image(path='media/logo.png', width=96, height=96) %}
+      
+      <a class="header__title-link" href="{{ get_url(path='/') | safe }}">
+        <img src="{{ image.url }}" alt="" width="48" height="48"/>
+        {{ config.title }}
+      </a>
     </{{ header_element }}>
 
     <nav class="header__navigation">

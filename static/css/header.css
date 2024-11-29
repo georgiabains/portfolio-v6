@@ -4,10 +4,13 @@
 
 .header__title {
   margin: 0;
+}
 
-  a {
-    text-decoration: none;
-  }
+.header__title-link {
+  align-items: flex-end;
+  display: flex;
+  gap: var(--spacing-xs);
+  text-decoration: none;
 }
 
 .header__navigation {
@@ -21,7 +24,7 @@
 
 @media screen and (min-width: 768px) {
   .header__row {
-    align-items: center;
+    align-items: flex-end;
     display: flex;
     justify-content: space-between;
   } 
