@@ -8,9 +8,9 @@
 
 .header__title-link {
   align-items: flex-end;
+  border: 0;
   display: flex;
   gap: var(--spacing-xs);
-  text-decoration: none;
 }
 
 .header__navigation {
