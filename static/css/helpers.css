@@ -78,3 +78,7 @@ a.bubble {
     color: var(--color-neutral-0);
   }
 }
+
+.text--lighter {
+  color: var(--color-neutral-2);
+}
