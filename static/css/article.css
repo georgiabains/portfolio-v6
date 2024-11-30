@@ -11,10 +11,6 @@
   margin-block-end: var(--spacing-xs);
 }
 
-.article__date {
-  color: var(--color-neutral-3);
-}
-
 .article__toc {
   margin-block: var(--spacing-l);
 

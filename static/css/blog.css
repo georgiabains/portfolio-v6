@@ -1,10 +1,9 @@
 .blog__list {
   display: grid;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-3xl);
 }
 
 .blog__meta {
-  color: var(--color-neutral-2);
   margin-block-end: var(--spacing-xs);
   margin-block-start: var(--spacing-3xs);
 }
@@ -12,6 +11,12 @@
 .blog__excerpt {
   margin: 0;
   margin-block-start: var(--spacing-m);
+}
+
+.blog__list-item-tags {
+  align-items: center;
+  display: flex;
+  gap: var(--spacing-xs);
 }
 
 .blog__pagination {
