@@ -4,19 +4,19 @@
 }
 
 .blog__meta {
-  margin-block-end: var(--spacing-xs);
-  margin-block-start: var(--spacing-3xs);
-}
-
-.blog__excerpt {
-  margin: 0;
-  margin-block-start: var(--spacing-m);
+  margin-block-end: var(--spacing-3xs);
+  margin-block-start: var(--spacing-xs);
 }
 
 .blog__list-item-tags {
   align-items: center;
   display: flex;
   gap: var(--spacing-xs);
+}
+
+.blog__excerpt {
+  margin: 0;
+  margin-block-start: var(--spacing-m);
 }
 
 .blog__pagination {

@@ -23,16 +23,7 @@
           <p class="blog__meta text--lighter">{{ page.date | date(format="%d %B %Y") }}</p>
 
           {% if page.taxonomies.tagged %}
-            <div class="blog__list-item-tags text--lighter">
-              <span id="article-tag-{{ paginator.current_index }}">Tagged:</span>
-              <ul class="list--flex list--unstyled" aria-labelledby="article-tag-{{ paginator.current_index }}">
-                {% for tag in page.taxonomies.tagged %}
-                  <li class="blog__tag">
-                    <a class="button outline" href="/tagged/{{ tag | slugify }}"># {{ tag }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
+            <p class="text--lighter">Tagged: {% for tag in page.taxonomies.tagged %}<a href="/tagged/{{ tag | slugify }}">{{ tag }}</a>{% if loop.last == false %}, {% endif %}{% endfor %}</p>
           {% endif %}
 
           {% if page.extra %}
