@@ -7,3 +7,40 @@
     margin-block-end: var(--spacing-xs);
   }
 }
+
+.footer__social-links {
+  align-items: center;
+  display: flex;
+  gap: var(--spacing-m);
+  margin-block-end: var(--spacing-xl);
+
+  li {
+    padding-inline-end: var(--spacing-l);
+    position: relative;
+  }
+
+  li:not(:last-child)::after {
+    content: '\25AA';
+    color: var(--color-neutral-2);
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.footer__social-link {
+  align-items: center;
+  border: 0;
+  display: flex;
+  gap: var(--spacing-2xs);
+  overflow: hidden;
+
+  &:hover .footer__social-link-label {
+    border-color: var(--color-primary-3);
+  }
+}
+
+.footer__social-link-label {
+  border-bottom: 2px solid var(--text-link);
+}
