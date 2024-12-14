@@ -3,6 +3,7 @@
 
   Renders blog "hub" page.
 #}
+{% import "macros.html" as macros %}
 {% extends "base.html" %}
 
 {% block css %} 
@@ -16,22 +17,7 @@
       {{ section.title }}
     </h1>
 
-    <ul class="blog__list list--unstyled">
-      {% for page in paginator.pages %}
-        <li>
-          <a class="h2" href="{{ page.permalink | safe }}">{{ page.title }}</a>
-          <p class="blog__meta text--lighter">{{ page.date | date(format="%d %B %Y") }}</p>
-
-          {% if page.taxonomies.tagged %}
-            <p class="text--lighter">Tagged: {% for tag in page.taxonomies.tagged %}<a href="/tagged/{{ tag | slugify }}">{{ tag }}</a>{% if loop.last == false %}, {% endif %}{% endfor %}</p>
-          {% endif %}
-
-          {% if page.extra %}
-            <p class="blog__excerpt">{{ page.extra.excerpt }}</p>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
+    {{ macros::blog(paginator=paginator.pages) }}
 
     {% if paginator and paginator.number_pagers > 1 %}
       {% set page_label = "<span class='visually-hidden'>Page</span>" %}

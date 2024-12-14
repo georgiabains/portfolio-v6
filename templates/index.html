@@ -12,6 +12,6 @@
   <section>
     <h2>Browse my latest blogs</h2>
     {% set blog_section = get_section(path="blog/_index.md") %}
-    {{ macros::blog(paginator=blog_section.pages, limit=5)}}
+    {{ macros::blog(paginator=blog_section.pages, limit=5) }}
   </section>
 {% endblock content %}

@@ -8,7 +8,7 @@
   @param {Integer} limit - Max number of posts to display.
 
   Example usage:
-  - {{ macros::blog(paginator=blog_section.pages, limit=5)}}
+  - {{ macros::blog(paginator=blog_section.pages, limit=5) }}
 #}
 {% macro blog(paginator, limit=false) %}
   <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/blog.css', trailing_slash=false) | safe }}" />
