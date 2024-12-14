@@ -1,6 +1,6 @@
 .footer {
   border-top: 4px solid var(--color-primary-6);
-  margin-block: var(--spacing-2xl) var(--spacing-4xl);
+  margin-block: var(--spacing-3xl) var(--spacing-4xl);
   padding-block-start: var(--spacing-s);
 
   p {
