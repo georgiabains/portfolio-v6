@@ -1,11 +1,6 @@
 {% import "macros.html" as macros %}
 {% extends "base.html" %}
 
-{% block css %} 
-  {{ super() }}
-  <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/blog.css', trailing_slash=false) | safe }}" />
-{% endblock css %}
-
 {% block content %}
   <section>
     <h1 class="title">
@@ -19,94 +14,6 @@
     {% endif %}
 
     {{ macros::blog(paginator=pages) }}
-
-    {% if paginator and paginator.number_pagers > 1 %}
-      {% set page_label = "<span class='visually-hidden'>Page</span>" %}
-      {% set is_first_page = paginator.current_index == 1 %}
-
-      <nav aria-label="Pagination" class="blog__pagination">
-        <ul class="list--flex list--unstyled">
-          {% if paginator.previous %}
-            <li>
-              <a class="button outline blog__pagination-link blog__pagination-arrow" href="{{ paginator.previous }}"> 
-                {{ load_data(path='icons/arrow-left.svg', trailing_slash = false) | safe }}
-                Previous {{ page_label | safe }}
-              </a>
-            </li>
-          {% endif %}
-
-          <li>
-            <a 
-              {% if paginator.current_index == 1 %}aria-current="page"{% endif %}
-              class="button outline blog__pagination-link"
-              href="{{ paginator.first }}"
-            >
-              {{ page_label | safe }} 1
-            </a>
-          </li>
-
-          {% if paginator.current_index >= 4 and paginator.current_index <= paginator.number_pagers %}
-            <li>&hellip;</li>
-          {% endif %}
-
-          {% if paginator.previous and paginator.current_index - 1 != 1 %}
-          <li>
-              <a 
-                class="button outline blog__pagination-link"
-                href="{{ paginator.previous }}"
-              >
-                {{ page_label | safe }} {{ paginator.current_index - 1 }}
-              </a>
-            </li>
-          {% endif %}
-
-          {% if paginator.current_index != 1 and paginator.current_index != paginator.number_pagers %}
-            <li>
-              <a 
-                aria-current="page"
-                class="button outline blog__pagination-link"
-                href="{{ paginator.current_index }}"
-              >
-                {{ page_label | safe }} {{ paginator.current_index }}
-              </a>
-            </li>
-          {% endif %}
-
-          {% if paginator.next and paginator.current_index +1 != paginator.number_pagers %}
-            <li>
-              <a 
-                class="button outline blog__pagination-link"
-                href="{{ paginator.next }}"
-              >
-                {{ page_label | safe }} {{ paginator.current_index + 1 }}
-              </a>
-            </li>
-          {% endif %}
-
-          {% if paginator.current_index <= paginator.number_pagers - 3 %}
-            <li>&hellip;</li>
-          {% endif %}
-
-          <li>
-            <a 
-              {% if paginator.current_index == paginator.number_pagers %}aria-current="page"{% endif %}
-              class="button outline blog__pagination-link"
-              href="{{ paginator.last }}"
-            >
-              {{ page_label | safe }} {{ paginator.number_pagers }}
-            </a>
-          </li>
-
-          {% if paginator.next %}
-            <li>
-              <a class="button outline blog__pagination-link blog__pagination-arrow" href="{{ paginator.next }}">
-                Next {{ page_label | safe }}
-                {{ load_data(path='icons/arrow-right.svg', trailing_slash = false) | safe }}
-              </a>
-            </li>
-          {% endif %}
-          </ul>
-      </nav>
-    {% endif %}
+    {{ macros::pagination(paginator=paginator) }}
   </section>
 {% endblock content%}
