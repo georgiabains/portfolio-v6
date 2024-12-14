@@ -3,8 +3,13 @@
 
   Index page.
 #}
+{% import "macros.html" as macros %}
 {% extends "base.html" %}
 
 {% block content %}
   {{ section.content | safe }}
+
+  {% set blog_section = get_section(path="blog/_index.md") %}
+
+  {{ macros::blog_array(paginator=blog_section.pages, limit=5)}}
 {% endblock content %}

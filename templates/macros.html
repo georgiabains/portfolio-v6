@@ -1,0 +1,12 @@
+
+{% macro blog_array(paginator, limit=false) %}
+  {% for post in paginator %}
+    <ul>
+      <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+    </ul>
+
+    {% if limit %}
+      {% if loop.index == 3 %}{% break %}{% endif %}
+    {% endif %}
+  {% endfor %}
+{% endmacro blog_array %}
