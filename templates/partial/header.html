@@ -9,31 +9,29 @@
 {% endblock css %}
 
 <header class="header">
-  <div class="header__row">
-    {% set header_element = 'h1' %}
-    {% if current_path != '/' %}
-      {% set header_element = 'h2' %}
-    {% endif %}
+  {% set header_element = 'h1' %}
+  {% if current_path != '/' %}
+    {% set header_element = 'h2' %}
+  {% endif %}
 
-    <{{ header_element }} class="h3 header__title">
-      {% set image = resize_image(path='media/logo.png', width=96, height=96) %}
-      
-      <a class="header__title-link" href="{{ get_url(path='/') | safe }}">
-        <img src="{{ image.url }}" alt="" width="48" height="48"/>
-        {{ config.title }}
-      </a>
-    </{{ header_element }}>
+  <{{ header_element }} class="h3 header__title">
+    {% set image = resize_image(path='media/logo.png', width=96, height=96) %}
+    
+    <a class="header__title-link" href="{{ get_url(path='/') | safe }}">
+      <img src="{{ image.url }}" alt="" width="48" height="48"/>
+      {{ config.title }}
+    </a>
+  </{{ header_element }}>
 
-    <nav class="header__navigation">
-      <a
-        {% if current_path == '/about/' %}aria-current="page"{% endif %}
-        href="{{ get_url(path='@/about.md', trailing_slash=false) | safe }}"
-      >About</a>
+  <nav class="header__navigation">
+    <a
+      {% if current_path == '/about/' %}aria-current="page"{% endif %}
+      href="{{ get_url(path='@/about.md', trailing_slash=false) | safe }}"
+    >About</a>
 
-      <a 
-        {% if current_path == '/blog/' %}aria-current="page"{% endif %}
-        href="{{ get_url(path='@/blog/_index.md') }}"
-      >Blog</a>
-    </nav>
-  </div>
+    <a 
+      {% if current_path == '/blog/' %}aria-current="page"{% endif %}
+      href="{{ get_url(path='@/blog/_index.md') }}"
+    >Blog</a>
+  </nav>
 </header>

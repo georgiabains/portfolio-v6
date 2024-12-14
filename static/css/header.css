@@ -1,4 +1,7 @@
 .header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
   margin-block: var(--spacing-2xl);
 }
 
@@ -9,7 +12,7 @@
 .header__title-link {
   align-items: flex-end;
   border: 0;
-  display: flex;
+  display: inline-flex;
   gap: var(--spacing-xs);
 }
 
@@ -23,9 +26,9 @@
 }
 
 @media screen and (min-width: 768px) {
-  .header__row {
-    align-items: flex-end;
-    display: flex;
+  .header {
+    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
   } 
 }
