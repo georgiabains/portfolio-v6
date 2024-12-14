@@ -13,7 +13,7 @@
     {% set pages = term.pages %}
     {% endif %}
 
-    {{ macros::blog(paginator=pages) }}
+    {{ macros::blog(pages=pages) }}
     {{ macros::pagination(paginator=paginator) }}
   </section>
 {% endblock content%}

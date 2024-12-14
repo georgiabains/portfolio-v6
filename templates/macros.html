@@ -4,17 +4,17 @@
 
   Renders an unordered list of blog posts.
 
-  @param {Array} paginator - Array of blog posts.
+  @param {Array} pages - Array of blog posts.
   @param {Integer} limit - Max number of posts to display.
 
   Example usage:
-  - {{ macros::blog(paginator=blog_section.pages, limit=5) }}
+  - {{ macros::blog(pages=blog_section.pages, limit=5) }}
 #}
-{% macro blog(paginator, limit=false) %}
+{% macro blog(pages, limit=false) %}
   <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/blog.css', trailing_slash=false) | safe }}" />
 
   <ul class="blog__list list--unstyled">
-    {% for page in paginator %}
+    {% for page in pages %}
       <li>
         <a class="h2" href="{{ page.permalink | safe }}">{{ page.title }}</a>
         <p class="blog__meta text--lighter">{{ page.date | date(format="%d %B %Y") }}</p>

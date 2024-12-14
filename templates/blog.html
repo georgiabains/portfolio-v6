@@ -12,8 +12,7 @@
       {{ section.title }}
     </h1>
 
-    {{ macros::blog(paginator=paginator.pages) }}
-
+    {{ macros::blog(pages=paginator.pages) }}
     {{ macros::pagination(paginator=paginator) }}
   </section>
 {% endblock content %}
