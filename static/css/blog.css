@@ -1,6 +1,6 @@
 .blog__list {
   display: grid;
-  gap: var(--spacing-3xl);
+  gap: var(--spacing-m);
 }
 
 .blog__meta {

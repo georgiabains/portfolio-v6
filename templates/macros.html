@@ -1,12 +1,36 @@
 
-{% macro blog_array(paginator, limit=false) %}
-  {% for post in paginator %}
-    <ul>
-      <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
-    </ul>
+{#
+  Macro: Blog
 
-    {% if limit %}
-      {% if loop.index == 3 %}{% break %}{% endif %}
-    {% endif %}
-  {% endfor %}
-{% endmacro blog_array %}
+  Renders an unordered list of blog posts.
+
+  @param {Array} paginator - Array of blog posts.
+  @param {Integer} limit - Max number of posts to display.
+
+  Example usage:
+  - {{ macros::blog(paginator=blog_section.pages, limit=5)}}
+#}
+{% macro blog(paginator, limit=false) %}
+  <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/blog.css', trailing_slash=false) | safe }}" />
+
+  <ul class="blog__list list--unstyled">
+    {% for page in paginator %}
+      <li>
+        <a class="h2" href="{{ page.permalink | safe }}">{{ page.title }}</a>
+        <p class="blog__meta text--lighter">{{ page.date | date(format="%d %B %Y") }}</p>
+
+        {% if page.taxonomies.tagged %}
+          <p class="text--lighter">Tagged: {% for tag in page.taxonomies.tagged %}<a href="/tagged/{{ tag | slugify }}">{{ tag }}</a>{% if loop.last == false %}, {% endif %}{% endfor %}</p>
+        {% endif %}
+
+        {% if page.extra %}
+          <p class="blog__excerpt">{{ page.extra.excerpt }}</p>
+        {% endif %}
+      </li>
+
+      {% if limit %}
+        {% if loop.index == 3 %}{% break %}{% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endmacro blog %}
