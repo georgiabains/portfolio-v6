@@ -20,7 +20,7 @@
         <p class="blog__meta text--lighter">{{ page.date | date(format="%d %B %Y") }}</p>
 
         {% if page.taxonomies.tagged %}
-          <p class="text--lighter">Tagged: {% for tag in page.taxonomies.tagged %}<a href="/tagged/{{ tag | slugify }}">{{ tag }}</a>{% if loop.last == false %}, {% endif %}{% endfor %}</p>
+          <p class="text--lighter">Tagged: {% for tag in page.taxonomies.tagged %}{{ tag }}{% if loop.last == false %}, {% endif %}{% endfor %}</p>
         {% endif %}
 
         {% if page.extra %}
