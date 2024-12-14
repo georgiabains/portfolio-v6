@@ -1,6 +1,6 @@
 +++
 +++
-## Hiya, I'm Georgia
+# Hi, I'm Georgia
 
 I'm a frontend developer specialising in website accessibility.
 
