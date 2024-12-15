@@ -35,6 +35,8 @@
     <meta name="description" content="{{ description | safe }}">
 
     {% block css %}
+      <link rel="preload" href="{{ get_url(path='fonts/atkinson-hyperlegible/AtkinsonHyperlegible-Regular.ttf', trailing_slash=false) | safe }}" as="font" type="font/woff2" crossorigin>
+    
       <style>
         @font-face {
           font-display: swap;
