@@ -6,58 +6,7 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 
-<head>
-  {% block head %}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    {% if page.title %}
-      {% set title = page.title ~ " - Georgia Bains" %}
-    {% elif section.title %}
-      {% set title = section.title ~ " - Georgia Bains" %}
-    {% elif config.title %}
-      {% set title = config.title %}
-    {% else %}
-      {% set title = "Georgia Bains" %}
-    {% endif %}
-    <title>{{ title }}</title>
-    
-    <link rel="icon" href="{{ get_url(path='favicon.ico') }}">
-
-    <meta name="author" content="Georgia Bains">
-
-    {% if page.description %}
-      {% set description = page.description %}
-    {% elif section.description %}
-      {% set description = section.description %}
-    {% elif config.description %}
-      {% set description = config.description %}
-    {% else %}
-      {% set description = "Georgia Bains is a frontend developer specialising in accessibility. Browse this blog to learn more about accessible approaches to web development." %}
-    {% endif %}
-    <meta name="description" content="{{ description | safe }}">
-
-    {% block css %}
-      <style>
-        @font-face {
-          font-display: swap;
-          font-family: "Atkinson Hyperlegible";
-          src:
-            local("Atkinson Hyperlegible"),
-            url("{{ get_url(path='fonts/atkinson-hyperlegible/AtkinsonHyperlegible-Regular.ttf', trailing_slash=false) | safe }}") format("truetype");
-        }
-      </style>
-      <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/variables.css', trailing_slash=false) | safe }}" />
-      <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/base.css', trailing_slash=false) | safe }}" />
-      <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/helpers.css', trailing_slash=false) | safe }}" />
-    {% endblock css %}
-
-    <script>
-      /* Prevent Firefox FOUC */
-      let FF_FOUC_FIX;
-    </script>
-  {% endblock head %}
-</head>
+{% include "partial/head.html" %}
 
 <body class="container">
   {% include "partial/header.html" %}
