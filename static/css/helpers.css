@@ -70,3 +70,9 @@
 .text--lighter {
   color: var(--color-neutral-2);
 }
+
+section {
+  &:not(:first-child) {
+    margin-block-start: var(--spacing-3xl);
+  }
+}
