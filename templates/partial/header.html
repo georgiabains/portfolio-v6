@@ -17,7 +17,7 @@
     {% set image = resize_image(path='media/logo.png', width=96, height=96) %}
     
     <a class="header__title-link" href="{{ get_url(path='/') | safe }}">
-      <img src="{{ image.url }}" alt="" width="48" height="48"/>
+      <img src="{{ image.url }}" alt="" width="48" height="48" fetchpriority="high" />
       {{ config.title }}
     </a>
   </{{ header_element }}>
