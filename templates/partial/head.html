@@ -35,7 +35,7 @@
     <meta name="description" content="{{ description | safe }}">
 
     {% block css %}
-      <link rel="preload" href="{{ get_url(path='fonts/atkinson-hyperlegible/AtkinsonHyperlegible-Regular.ttf', trailing_slash=false) | safe }}" as="font" type="font/ttf" crossorigin>
+      <link rel="preload" href="{{ get_url(path='fonts/atkinson-hyperlegible/AtkinsonHyperlegible-Regular.ttf', trailing_slash=false) | safe }}" as="font" type="font/ttf" crossorigin="anonymous">
     
       <style>
         @font-face {
