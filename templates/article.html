@@ -3,12 +3,9 @@
   
 {% extends "base.html" %}
 
-{% block css %} 
-  {{ super() }}
-  <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/article.css', trailing_slash=false) | safe }}" />
-{% endblock css %} 
-
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{{ get_url(path='css/article.css', trailing_slash=false) | safe }}" />
+
 <article>
   <header>
     <h1 class="article__title">{{ page.title }}</h1>
