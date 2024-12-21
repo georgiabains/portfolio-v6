@@ -14,7 +14,7 @@
 
   /**
    * Colours.
-   * https://accessiblepalette.com/?lightness=97,92,82,72,47,36,25,14,7.5,4.3&a0ba97=0,0&786a86=0,0&0F0F0F=0,0
+   * https://accessiblepalette.com/?lightness=97,92,82,72,47,36,25,14,7.5,4.3&a0ba97=0,0&0F0F0F=0,0
    */
 
   /* neutral - black through white */
@@ -40,18 +40,6 @@
   --color-primary-7: #20251e;
   --color-primary-8: #141713;
   --color-primary-9: #0d100d;
-
-  /* purple - accent */
-  --color-accent-0: #f8f8f9;
-  --color-accent-1: #e9e7ec;
-  --color-accent-2: #cfcad4;
-  --color-accent-3: #b5aebd;
-  --color-accent-4: #786a86;
-  --color-accent-5: #5b5166;
-  --color-accent-6: #403847;
-  --color-accent-7: #26222b;
-  --color-accent-8: #18151b;
-  --color-accent-9: #100e12;
 
   /**
    * Colours - light mode.
