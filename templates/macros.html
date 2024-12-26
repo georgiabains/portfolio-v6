@@ -5,18 +5,19 @@
   Renders an unordered list of blog posts.
 
   @param {Array} pages - Array of blog posts.
-  @param {Integer} limit - Max number of posts to display.
+  @param {Integer} [limit] - Max number of posts to display.
+  @param {String} [header_class] - Specify header helper class.
 
   Example usage:
   - {{ macros::blog(pages=blog_section.pages, limit=5) }}
 #}
-{% macro blog(pages, limit=false) %}
+{% macro blog(pages, limit=false, header_class="h2") %}
   <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/blog.css', trailing_slash=false) | safe }}" />
 
   <ul class="blog__list list--unstyled">
     {% for page in pages %}
       <li>
-        <a class="h2" href="{{ page.permalink | safe }}">{{ page.title }}</a>
+        <a class="{{ header_class }}" href="{{ page.permalink | safe }}">{{ page.title }}</a>
         <p class="blog__meta text--lighter">{{ page.date | date(format="%d %B %Y") }}</p>
 
         {% if page.taxonomies.tagged %}
