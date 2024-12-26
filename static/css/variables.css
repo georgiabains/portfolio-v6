@@ -61,7 +61,7 @@
    * Text sizes.
    */
   --text-base: 1rem; /* 16px */
-  --typescale-ratio: 1.25; /* Major Third */
+  --typescale-ratio: 1.2; /* Minor third */
 
   --text-xs: calc(var(--text-base) / var(--typescale-ratio));
   --text-s: var(--text-base);
