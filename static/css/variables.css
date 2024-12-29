@@ -42,24 +42,24 @@
   --color-primary-9: #0d100d;
 
   /**
-   * Colours - light mode.
+   * Colours - default.
    */
-  --color-background: var(--color-primary-1);
-  --color-background-deemphasis: var(--color-neutral-1);
+  --color-background: var(--color-primary-8);
+  --color-background-deemphasis: var(--color-neutral-7);
   --color-background-emphasis: var(--color-primary-9);
 
-  --color-border-decoration: var(--color-primary-2);
   --color-border-emphasis: var(--color-neutral-3);
-
-  --color-link: var(--color-primary-7);
+  --color-border-decoration: var(--color-primary-6);
+  
+  --color-link: var(--color-primary-1);
   --color-link-background: transparent;
-  --color-link-background-hover: var(--color-primary-8);
+  --color-link-background-hover: var(--color-primary-3);
   --color-link-emphasis: var(--color-neutral-0);
-  --color-link-hover: var(--color-neutral-0);
+  --color-link-hover: var(--color-neutral-9);
 
-  --color-text: var(--color-neutral-8);
-  --color-text-deemphasis: var(--color-neutral-7);
-  --color-text-emphasis: var(--color-neutral-9);
+  --color-text: var(--color-neutral-1);
+  --color-text-deemphasis: var(--color-neutral-2);
+  --color-text-emphasis: var(--color-neutral-0);
 
   /**
    * Text sizes.
@@ -117,26 +117,26 @@
 }
 
 /**
- * Colours - dark mode.
+ * Colours - light mode.
  */
-html[data-theme="dark"],
-html[data-theme="dark system"] {
-  --color-background: var(--color-primary-8);
-  --color-background-deemphasis: var(--color-neutral-7);
+html[data-theme="light"],
+html[data-theme="light system"] {
+  --color-background: var(--color-primary-1);
+  --color-background-deemphasis: var(--color-neutral-1);
   --color-background-emphasis: var(--color-primary-9);
 
+  --color-border-decoration: var(--color-primary-2);
   --color-border-emphasis: var(--color-neutral-3);
-  --color-border-decoration: var(--color-primary-6);
-  
-  --color-link: var(--color-primary-1);
-  --color-link-background: transparent;
-  --color-link-background-hover: var(--color-primary-3);
-  --color-link-emphasis: var(--color-neutral-0);
-  --color-link-hover: var(--color-neutral-9);
 
-  --color-text: var(--color-neutral-1);
-  --color-text-deemphasis: var(--color-neutral-2);
-  --color-text-emphasis: var(--color-neutral-0);
+  --color-link: var(--color-primary-7);
+  --color-link-background: transparent;
+  --color-link-background-hover: var(--color-primary-8);
+  --color-link-emphasis: var(--color-neutral-0);
+  --color-link-hover: var(--color-neutral-0);
+
+  --color-text: var(--color-neutral-8);
+  --color-text-deemphasis: var(--color-neutral-7);
+  --color-text-emphasis: var(--color-neutral-9);
 
   img {
     filter: brightness(75%);
@@ -144,24 +144,24 @@ html[data-theme="dark system"] {
 }
 
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --color-background: var(--color-primary-8);
-    --color-background-deemphasis: var(--color-neutral-7);
+    --color-background: var(--color-primary-1);
+    --color-background-deemphasis: var(--color-neutral-1);
     --color-background-emphasis: var(--color-primary-9);
 
+    --color-border-decoration: var(--color-primary-2);
     --color-border-emphasis: var(--color-neutral-3);
-    --color-border-decoration: var(--color-primary-6);
-    
-    --color-link: var(--color-primary-1);
-    --color-link-background: transparent;
-    --color-link-background-hover: var(--color-primary-3);
-    --color-link-emphasis: var(--color-neutral-0);
-    --color-link-hover: var(--color-neutral-9);
 
-    --color-text: var(--color-neutral-1);
-    --color-text-deemphasis: var(--color-neutral-2);
-    --color-text-emphasis: var(--color-neutral-0);
+    --color-link: var(--color-primary-7);
+    --color-link-background: transparent;
+    --color-link-background-hover: var(--color-primary-8);
+    --color-link-emphasis: var(--color-neutral-0);
+    --color-link-hover: var(--color-neutral-0);
+
+    --color-text: var(--color-neutral-8);
+    --color-text-deemphasis: var(--color-neutral-7);
+    --color-text-emphasis: var(--color-neutral-9);
   }
 
   img {
