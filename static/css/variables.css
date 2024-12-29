@@ -14,11 +14,11 @@
 
   /**
    * Colours.
-   * https://accessiblepalette.com/?lightness=97,92,82,72,47,36,25,14,7.5,4.3&a0ba97=0,0&0F0F0F=0,0
+   * https://accessiblepalette.com/?lightness=98,92,82,72,47,36,25,14,7.5,4.3&a0ba97=0,0&0F0F0F=0,0
    */
 
   /* neutral - black through white */
-  --color-neutral-0: #f8f8f8;
+  --color-neutral-0: #f9f9f9;
   --color-neutral-1: #e8e8e8;
   --color-neutral-2: #cccccc;
   --color-neutral-3: #b0b0b0;
@@ -30,7 +30,7 @@
   --color-neutral-9: #0f0f0f;
 
   /* green - primary */
-  --color-primary-0: #f5f7f1;
+  --color-primary-0: #f8fAf7;
   --color-primary-1: #e3eae0;
   --color-primary-2: #c0d1ba;
   --color-primary-3: #9eb895;
@@ -144,7 +144,7 @@ html[data-theme="dark system"] {
 }
 
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--color-primary-8);
     --color-background-deemphasis: var(--color-neutral-7);
@@ -166,4 +166,4 @@ html[data-theme="dark system"] {
   img {
     filter: brightness(75%);
   }
-}
+} */
