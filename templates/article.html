@@ -71,4 +71,20 @@
     {% endif %}
   </footer>
 </article>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ page.title }}",
+    "datePublished": "{{ page.date | date(format="%+") }}",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Georgia Bains",
+        "url": "{{ get_url(path='@/about.md') }}"
+      }
+    ]
+  }
+</script>
 {% endblock content %}
