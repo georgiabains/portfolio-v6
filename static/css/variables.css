@@ -53,9 +53,9 @@
 
   --color-link: var(--color-primary-7);
   --color-link-background: transparent;
-  --color-link-background-hover: var(--color-primary-2);
+  --color-link-background-hover: var(--color-primary-8);
   --color-link-emphasis: var(--color-neutral-0);
-  --color-link-hover: var(--color-neutral-8);
+  --color-link-hover: var(--color-neutral-0);
 
   --color-text: var(--color-neutral-8);
   --color-text-deemphasis: var(--color-neutral-7);
@@ -132,7 +132,7 @@ html[data-theme="dark system"] {
   --color-link-background: transparent;
   --color-link-background-hover: var(--color-primary-3);
   --color-link-emphasis: var(--color-neutral-0);
-  --color-link-hover: var(--color-neutral-1);
+  --color-link-hover: var(--color-neutral-9);
 
   --color-text: var(--color-neutral-1);
   --color-text-deemphasis: var(--color-neutral-2);
@@ -144,7 +144,7 @@ html[data-theme="dark system"] {
 }
 
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--color-primary-8);
     --color-background-deemphasis: var(--color-neutral-7);
@@ -157,6 +157,7 @@ html[data-theme="dark system"] {
     --color-link-background: transparent;
     --color-link-background-hover: var(--color-primary-3);
     --color-link-emphasis: var(--color-neutral-0);
+    --color-link-hover: var(--color-neutral-9);
 
     --color-text: var(--color-neutral-1);
     --color-text-deemphasis: var(--color-neutral-2);
@@ -166,4 +167,4 @@ html[data-theme="dark system"] {
   img {
     filter: brightness(75%);
   }
-} */
+}
