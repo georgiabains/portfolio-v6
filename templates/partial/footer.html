@@ -8,22 +8,61 @@
 {% endblock css%}
 
 <footer class="footer">
-  <ul class="footer__social-links list--unstyled">
-    <li>
-      <a href="https://github.com/georgiabains" class="footer__social-link" rel="me">
-        {{ load_data(path='icons/github.svg', trailing_slash = false) | safe }}
-        <span class="footer__social-link-label">GitHub</span>
-      </a>
-    </li>
+  <div class="footer-columns">
+    <div class="footer-disclaimers">
+      <p class="footer-title h3">Disclaimers</p>
+      <p><a href="https://umami.is/">Umami</a> analytics are active on this website. All data is anonymised and no cookies are set.</p>
+      <p>I do not use AI.</p>
+    </div>
 
-    <li>
-      <a href="https://www.linkedin.com/in/georgia-bains/" class="footer__social-link" rel="me">
-        {{ load_data(path='icons/linkedin.svg', trailing_slash = false) | safe }}
-        <span class="footer__social-link-label">LinkedIn</span>
-      </a>
-    </li>
-  </ul>
+    <div>
+      <p class="footer-title h3">Socials</p>
+      <ul class="footer__links-column list--unstyled">
+        <li>
+          <a href="https://github.com/georgiabains" class="footer__link" rel="me">
+            {{ load_data(path='icons/github.svg', trailing_slash = false) | safe }}
+            <span class="footer__social-link-label">GitHub</span>
+          </a>
+        </li>
 
-  <p>Built on <a href="https://www.getzola.org/">Zola</a>. Syntax highlighting is <a href="https://github.com/mjio/boron.tmtheme">Boron</a> with a custom background colour.</p>
-  <p>&#169; Georgia Bains {{ now() | date(format="%Y") }}</p>
+        <li>
+          <a href="https://www.linkedin.com/in/georgia-bains/" class="footer__link" rel="me">
+            {{ load_data(path='icons/linkedin.svg', trailing_slash = false) | safe }}
+            <span class="footer__social-link-label">LinkedIn</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer-title h3">Pages</p>
+      <ul class="footer__links-column list--unstyled">
+        <li>
+          <a 
+            href="{{ get_url(path='@/accessibility-statement.md', trailing_slash=false) | safe }}"
+            class="footer__link"
+          >
+            Accessibility Statement
+          </a>
+        </li>
+
+        <li>
+          <a 
+            href="{{ get_url(path='@/colophon.md', trailing_slash=false) | safe }}"
+            class="footer__link"
+          >
+            Colophon
+          </a>
+        </li>
+
+        <li>
+          <a href="/sitemap.xml" class="footer__link">
+            Sitemap
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="footer-copyright">&#169; Georgia Bains {{ now() | date(format="%Y") }}</p>
 </footer>
