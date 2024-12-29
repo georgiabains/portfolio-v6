@@ -34,6 +34,18 @@ a {
     border-radius: var(--border-radius-s);
     color: var(--color-link-hover);
   }
+
+  &:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+  }
+}
+
+@supports not selector(:focus-visible) {
+  a:focus {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+  }
 }
 
 h1,

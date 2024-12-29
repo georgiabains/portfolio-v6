@@ -50,6 +50,8 @@
 
   --color-border-emphasis: var(--color-neutral-3);
   --color-border-decoration: var(--color-primary-6);
+
+  --color-focus: var(--color-neutral-0);
   
   --color-link: var(--color-primary-1);
   --color-link-background: transparent;
@@ -128,6 +130,8 @@ html[data-theme="light system"] {
   --color-border-decoration: var(--color-primary-2);
   --color-border-emphasis: var(--color-neutral-3);
 
+  --color-focus: var(--color-neutral-9);
+
   --color-link: var(--color-primary-7);
   --color-link-background: transparent;
   --color-link-background-hover: var(--color-primary-8);
@@ -152,6 +156,8 @@ html[data-theme="light system"] {
 
     --color-border-decoration: var(--color-primary-2);
     --color-border-emphasis: var(--color-neutral-3);
+
+    --color-focus: var(--color-neutral-9);
 
     --color-link: var(--color-primary-7);
     --color-link-background: transparent;
