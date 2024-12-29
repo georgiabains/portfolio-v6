@@ -19,7 +19,7 @@
   }
 
   &[aria-current="page"] {
-    background-color: var(--color-primary-3);
-    color: var(--text-link-hover);
+    background-color: var(--color-link-background-hover);
+    color: var(--color-link-hover);
   }
 }

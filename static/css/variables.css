@@ -44,18 +44,22 @@
   /**
    * Colours - light mode.
    */
-  --background: var(--color-primary-0);
-  --background-on-hover: var(--color-primary-6);
-  --background-on-hover-shade: var(--color-primary-1);
-  --background-raised: var(--color-primary-1);
+  --color-background: var(--color-primary-1);
+  --color-background-deemphasis: var(--color-neutral-1);
+  --color-background-emphasis: var(--color-primary-9);
 
-  /* only use against --background */
-  --text-heading: var(--color-neutral-7);
-  --text-inverse: var(--color-primary-0); /* mainly used in hover states  */
-  --text-link: var(--color-primary-6);
-  --text-paragraph: var(--color-neutral-8);
-  --text-paragraph-emphasis: var(--color-neutral-9);
-  --text-paragraph-data: var(--color-neutral-6);
+  --color-border-decoration: var(--color-primary-2);
+  --color-border-emphasis: var(--color-neutral-3);
+
+  --color-link: var(--color-primary-7);
+  --color-link-background: transparent;
+  --color-link-background-hover: var(--color-primary-2);
+  --color-link-emphasis: var(--color-neutral-0);
+  --color-link-hover: var(--color-neutral-8);
+
+  --color-text: var(--color-neutral-8);
+  --color-text-deemphasis: var(--color-neutral-7);
+  --color-text-emphasis: var(--color-neutral-9);
 
   /**
    * Text sizes.
@@ -117,17 +121,22 @@
  */
 html[data-theme="dark"],
 html[data-theme="dark system"] {
-  --background: var(--color-primary-8);
-  --background-on-hover: var(--color-primary-1);
-  --background-on-hover-shade: var(--color-primary-9);
-  --background-raised: var(--color-primary-9);
+  --color-background: var(--color-primary-8);
+  --color-background-deemphasis: var(--color-neutral-7);
+  --color-background-emphasis: var(--color-primary-9);
 
-  --text-heading: var(--color-neutral-2);
-  --text-inverse: var(--color-primary-9);
-  --text-link: var(--color-primary-1);
-  --text-paragraph: var(--color-neutral-1);
-  --text-paragraph-emphasis: var(--color-neutral-0);
-  --text-paragraph-data: var(--color-neutral-4);
+  --color-border-emphasis: var(--color-neutral-3);
+  --color-border-decoration: var(--color-primary-6);
+  
+  --color-link: var(--color-primary-1);
+  --color-link-background: transparent;
+  --color-link-background-hover: var(--color-primary-3);
+  --color-link-emphasis: var(--color-neutral-0);
+  --color-link-hover: var(--color-neutral-1);
+
+  --color-text: var(--color-neutral-1);
+  --color-text-deemphasis: var(--color-neutral-2);
+  --color-text-emphasis: var(--color-neutral-0);
 
   img {
     filter: brightness(75%);
@@ -137,18 +146,21 @@ html[data-theme="dark system"] {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: var(--color-primary-8);
-    --background-on-hover: var(--color-primary-1);
-    --background-on-hover-shade: var(--color-primary-9);
-    --background-raised: var(--color-primary-9);
+    --color-background: var(--color-primary-8);
+    --color-background-deemphasis: var(--color-neutral-7);
+    --color-background-emphasis: var(--color-primary-9);
 
-    --text-heading: var(--color-neutral-2);
-    --text-inverse: var(--color-primary-9);
-    --text-link: var(--color-primary-2);
-    --text-link-hover: var(--color-neutral-9);
-    --text-paragraph: var(--color-neutral-1);
-    --text-paragraph-emphasis: var(--color-neutral-0);
-    --text-paragraph-data: var(--color-neutral-4);
+    --color-border-emphasis: var(--color-neutral-3);
+    --color-border-decoration: var(--color-primary-6);
+    
+    --color-link: var(--color-primary-1);
+    --color-link-background: transparent;
+    --color-link-background-hover: var(--color-primary-3);
+    --color-link-emphasis: var(--color-neutral-0);
+
+    --color-text: var(--color-neutral-1);
+    --color-text-deemphasis: var(--color-neutral-2);
+    --color-text-emphasis: var(--color-neutral-0);
   }
 
   img {

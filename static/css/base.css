@@ -4,14 +4,14 @@
 
 html,
 body {
-  background-color: var(--background);
+  background-color: var(--color-background);
   font-size: 1em;
   margin: 0;
   padding: 0;
 }
 
 body {
-  color: var(--text-paragraph);
+  color: var(--color-text);
   font-family: 'Atkinson Hyperlegible', sans-serif;
   font-weight: 400;
   line-height: var(--line-default);
@@ -23,16 +23,16 @@ p {
 }
 
 a {
-  border-bottom: 2px solid var(--text-link);
-  color: var(--text-link);
+  border-bottom: 2px solid var(--color-link);
+  color: var(--color-link);
   text-decoration: none;
   
   &:hover,
   &:focus {
-    background-color: var(--color-primary-3);
-    border-color: var(--color-primary-3);
+    background-color: var(--color-link-background-hover);
+    border-color: var(--color-link-background-hover);
     border-radius: var(--border-radius-s);
-    color: var(--text-link-hover);
+    color: var(--color-link-hover);
   }
 }
 
@@ -42,7 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--text-heading);
+  color: var(--color-text-deemphasis);
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
 
@@ -105,7 +105,7 @@ h6,
 }
 
 strong {
-  color: var(--text-paragraph-emphasis);
+  color: var(--color-text-emphasis);
   font-weight: 700;
 }
 
@@ -119,8 +119,8 @@ svg {
 }
 
 code {
-  border: 1px solid var(--color-neutral-3);
-  background-color: var(--color-neutral-7);
+  border: 1px solid var(--color-border-emphasis);
+  background-color: var(--color-background-deemphasis);
   border-radius: var(--border-radius-s);
   padding-inline: var(--spacing-2xs);
   font-size: var(--text-xs);
@@ -128,7 +128,7 @@ code {
 
 pre {
   /* Use custom background colour */
-  background-color: var(--color-primary-9) !important;
+  background-color: var(--color-background-emphasis) !important;
   border-radius: var(--border-radius-s);
   font-size: var(--text-xs);
   padding: var(--spacing-m) var(--spacing-m);
@@ -140,6 +140,6 @@ pre {
 }
 
 blockquote {
-  border-left: 4px solid var(--color-primary-3);
+  border-left: 4px solid var(--color-link-background-hover);
   padding-inline-start: var(--spacing-m);
 }
