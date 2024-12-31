@@ -3,6 +3,11 @@
   flex-direction: column;
   gap: var(--spacing-m);
   margin-block: var(--spacing-2xl);
+  position: relative;
+}
+
+.header__skip {
+  top: calc(var(--spacing-l) * -1);
 }
 
 .header__title {

@@ -8,6 +8,8 @@
 {% endblock css %}
 
 <header class="header">
+  <a href="#main" class="header__skip skip-link">Skip to main content</a>
+
   {% set header_element = 'h1' %}
   {% if current_path != '/' %}
     {% set header_element = 'h2' %}

@@ -4,7 +4,8 @@
   width: calc(100% - var(--spacing-xl));
 }
 
-.visually-hidden {
+.visually-hidden,
+.skip-link {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -12,6 +13,22 @@
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.skip-link:focus-visible {
+  clip: unset;
+  clip-path: unset;
+  height: auto;
+  width: auto;
+}
+
+@supports not selector(:focus-visible) {
+  .skip-link:focus {
+    clip: unset;
+    clip-path: unset;
+    height: auto;
+    width: auto;
+  }
 }
 
 .margin-reset {
@@ -32,18 +49,6 @@
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.skiplink {
-  position: absolute;
-  left: -1000px;
-  z-index: 2;
-  top: 0;
-  padding: var(--spacing-xs) var(--spacing-l);
-
-  &:focus-visible {
-    left: 0;
-  }
 }
 
 .button.outline {
