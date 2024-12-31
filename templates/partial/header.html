@@ -24,15 +24,25 @@
     </a>
   </{{ header_element }}>
 
-  <nav class="header__navigation">
-    <a
-      {% if current_path == '/about/' %}aria-current="page"{% endif %}
-      href="{{ get_url(path='@/about.md', trailing_slash=false) | safe }}"
-    >About</a>
+  <nav>
+    <ul class="header__navigation list--unstyled">
+      <li>
+        <a
+          {% if current_path == '/about/' %}aria-current="page"{% endif %}
+          href="{{ get_url(path='@/about.md', trailing_slash=false) | safe }}"
+        >
+          About
+        </a>
+      </li>
 
-    <a 
-      {% if current_path == '/blog/' %}aria-current="page"{% endif %}
-      href="{{ get_url(path='@/blog/_index.md') }}"
-    >Blog</a>
+      <li>
+        <a 
+          {% if current_path == '/blog/' %}aria-current="page"{% endif %}
+          href="{{ get_url(path='@/blog/_index.md') }}"
+        >
+          Blog
+        </a>
+      </li>
+    </ul>
   </nav>
 </header>
