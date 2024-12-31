@@ -67,6 +67,3 @@ Technology enables access and access is granted via technology. Accessibility an
 As frontend developers, we are responsible for building websites that people can or cannot use. I simply believe that **all** people should be able to use the websites I create. 
 
 If you've been able to make a website you work on more accessible, I'd love to hear from you! Feel free to send me an email at hello@georgiabains.com.
-
-
-
