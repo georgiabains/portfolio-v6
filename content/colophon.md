@@ -10,7 +10,7 @@ All colours pass WCAG 2.2 as well as the unreleased WCAG 3 contrast requirements
 All multi-line syntax highlighting is <a href="https://github.com/mjio/boron.tmtheme">Boron</a> with a custom background colour.</p>
 
 ## Tools
-I built this site on [Zola](https://www.getzola.org/), a Rust-based Static Site Generator (SSG).
+I built this site on [Zola](https://www.getzola.org/), a Rust-based Static Site Generator (SSG). It's hosted on [Cloudflare Pages](https://pages.cloudflare.com/).
 
 ## Typography
 Paragraphs use [Atkinson Hyperlegible](https://www.brailleinstitute.org/freefont/), a font created by the Braille Institute.
