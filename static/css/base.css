@@ -33,6 +33,11 @@ a {
     border-color: var(--color-link-background-hover);
     border-radius: var(--border-radius-s);
     color: var(--color-link-hover);
+
+    code {
+      background-color: var(--color-link-background-hover);
+      border-color: var(--color-background);
+    }
   }
 
   &:focus-visible {
