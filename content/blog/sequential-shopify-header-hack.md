@@ -4,6 +4,9 @@ date = 2025-01-12
 
 [taxonomies]
 tagged = ["Accessibility", "Shopify"]
+
+[extra]
+date_edited = 2026-07-01
 +++
 Keeping heading elements (`h1` through `h6`) sequential can be tricky when using Shopify Sections Everywhere, as their placement and frequency are entirely up to the client, or end-theme-user.
 
@@ -11,7 +14,7 @@ Since section headings and subheadings are often optional, assigning hardcoded h
 
 The solution I like to use is to assign the heading and/or subheading element to a variable. I'll use an example section that has blocks to demonstrate the code:
 
-```html
+```liquid
 {%- liquid
   assign subheading_element = 'h2'
 
