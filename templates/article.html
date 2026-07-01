@@ -12,12 +12,16 @@
 
     <p class="text--lighter">
       Published <time pubdate datetime="{{ page.date }}">{{ page.date | date(format="%d %B %Y") }}</time>
+
+      {% if page.extra.date_edited %}
+        <br>
+        Edited <time pubdate datetime="{{ page.extra.date_edited }}">{{ page.extra.date_edited | date(format="%d %B %Y") }}</time>
+      {% endif %}
     </p>
   </header>
 
-  {% if page.extra %}
+  {% if page.extra.excerpt %}
     <p>{{ page.extra.excerpt }}</p>
-    <!-- more -->
   {% endif %}
 
   <aside class="article__toc">
