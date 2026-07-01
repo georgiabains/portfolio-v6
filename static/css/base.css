@@ -149,7 +149,7 @@ pre {
   border-radius: var(--border-radius-s);
   font-size: var(--text-xs);
   padding: var(--spacing-m) var(--spacing-m);
-  overflow-x: auto;
+  white-space: pre-wrap;
 
   code {
     all: unset;
@@ -159,4 +159,19 @@ pre {
 blockquote {
   border-left: 4px solid var(--color-link-background-hover);
   padding-inline-start: var(--spacing-m);
+}
+
+figure {
+  margin-block: var(--spacing-2xl);
+  margin-inline: 0;
+
+  figcaption {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  figure {
+    margin-inline: var(--spacing-l);
+  }
 }

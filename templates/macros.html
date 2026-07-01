@@ -24,7 +24,7 @@
           <p class="text--lighter">Tagged: {% for tag in page.taxonomies.tagged %}{{ tag }}{% if loop.last == false %}, {% endif %}{% endfor %}</p>
         {% endif %}
 
-        {% if page.extra %}
+        {% if page.extra.excerpt %}
           <p class="blog__excerpt">{{ page.extra.excerpt }}</p>
         {% endif %}
       </li>
