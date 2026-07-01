@@ -149,7 +149,7 @@ pre {
   border-radius: var(--border-radius-s);
   font-size: var(--text-xs);
   padding: var(--spacing-m) var(--spacing-m);
-  overflow-x: auto;
+  white-space: pre-wrap;
 
   code {
     all: unset;
