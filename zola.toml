@@ -16,11 +16,7 @@ build_search_index = true
 generate_sitemap = true
 generate_robots_txt = true
 
-[markdown]
-highlight_code = true
+[markdown.highlighting]
+error_on_missing_language = true
 # Passes WCAG 2.1 AA accessibility requirements
-highlight_theme = "boron"
-smart_punctuation = true
-
-[extra]
-# Put all your custom variables here
+theme = "github-dark-high-contrast"
