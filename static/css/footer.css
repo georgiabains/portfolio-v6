@@ -8,6 +8,10 @@
   }
 }
 
+.footer-title {
+  margin-block-start: 0;
+}
+
 .footer-columns {
   display: grid;
   grid-template-columns: 1fr;
