@@ -36,6 +36,7 @@
 
     {% block css %}
       <link rel="preload" href="{{ get_url(path='fonts/atkinson-hyperlegible/AtkinsonHyperlegible-Regular.woff2', trailing_slash=false) | safe }}" as="font" type="font/woff2" crossorigin="anonymous">
+      <link rel="preload" href="{{ get_url(path='fonts/poppins/Poppins-Regular.woff2', trailing_slash=false) | safe }}" as="font" type="font/woff2" crossorigin="anonymous">
     
       <style>
         @font-face {
@@ -44,6 +45,22 @@
           src:
             local("Atkinson Hyperlegible"),
             url("{{ get_url(path='fonts/atkinson-hyperlegible/AtkinsonHyperlegible-Regular.woff2', trailing_slash=false) | safe }}") format("woff2");
+        }
+
+        @font-face {
+          font-display: swap;
+          font-family: "Poppins";
+          src:
+            local("Poppins"),
+            url("{{ get_url(path='fonts/poppins/Poppins-Regular.woff2', trailing_slash=false) | safe }}") format("woff2");
+        }
+
+        @font-face {
+          font-display: swap;
+          font-family: "Poppins SemiBold";
+          src:
+            local("Poppins"),
+            url("{{ get_url(path='fonts/poppins/Poppins-SemiBold.woff2', trailing_slash=false) | safe }}") format("woff2");
         }
       </style>
       
