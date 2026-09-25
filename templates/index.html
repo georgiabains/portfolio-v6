@@ -12,7 +12,7 @@
   </section>
 
   <section>
-    <h2>Browse my latest blogs</h2>
+    <h2>Browse my latest blog posts</h2>
     {% set blog_section = get_section(path="blog/_index.md") %}
     {{ macros::blog(pages=blog_section.pages, limit=5) }}
   </section>
