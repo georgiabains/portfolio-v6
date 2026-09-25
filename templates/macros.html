@@ -29,7 +29,7 @@
       </li>
 
       {% if limit %}
-        {% if loop.index == 3 %}{% break %}{% endif %}
+        {% if loop.index == limit %}{% break %}{% endif %}
       {% endif %}
     {% endfor %}
   </ul>
