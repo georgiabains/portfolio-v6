@@ -3,9 +3,14 @@
   gap: var(--spacing-m);
 }
 
+.blog__list-title {
+  color: inherit;
+  display: inline-block;
+  margin-block-start: var(--spacing-xs);
+}
+
 .blog__meta {
   margin-block-end: var(--spacing-3xs);
-  margin-block-start: var(--spacing-xs);
 }
 
 .blog__list-item-tags {

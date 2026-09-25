@@ -77,6 +77,6 @@
 
 section {
   &:not(:first-child) {
-    margin-block-start: var(--spacing-3xl);
+    margin-block-start: var(--spacing-2xl);
   }
 }

@@ -6,18 +6,17 @@
 
   @param {Array} pages - Array of blog posts.
   @param {Integer} [limit] - Max number of posts to display.
-  @param {String} [header_class] - Specify header helper class.
 
   Example usage:
   - {{ macros::blog(pages=blog_section.pages, limit=5) }}
 #}
-{% macro blog(pages, limit=false, header_class="h2") %}
+{% macro blog(pages, limit=false) %}
   <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/blog.css', trailing_slash=false) | safe }}" />
 
   <ul class="blog__list list--unstyled">
     {% for page in pages %}
       <li>
-        <a class="{{ header_class }}" href="{{ page.permalink | safe }}">{{ page.title }}</a>
+        <a class="h3 blog__list-title" href="{{ page.permalink | safe }}">{{ page.title }}</a>
         <p class="blog__meta text--lighter">{{ page.date | date(format="%d %B %Y") }}</p>
 
         {% if page.taxonomies.tagged %}
@@ -30,7 +29,7 @@
       </li>
 
       {% if limit %}
-        {% if loop.index == 3 %}{% break %}{% endif %}
+        {% if loop.index == limit %}{% break %}{% endif %}
       {% endif %}
     {% endfor %}
   </ul>

@@ -54,39 +54,31 @@ a {
 }
 
 h1,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
 h4,
+.h4,
 h5,
-h6 {
+.h5,
+h6,
+.h6 {
   color: var(--color-text-deemphasis);
   font-family: 'Poppins', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
+  margin-block-end: var(--spacing-xs);
+  margin-block-start: var(--spacing-xl);
 
   &:target {
     scroll-margin-block: var(--spacing-l);
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-block-end: var(--spacing-xs);
-  margin-block-start: var(--spacing-xl);
-}
-
 p {
   margin-block-start: 0;
   margin-block-end: var(--spacing-m);
-}
-
-h1,
-h2,
-h3 {
-  line-height: 1.4;
 }
 
 h1,
@@ -106,8 +98,8 @@ h3,
 
 h4,
 .h4 {
+  font-family: 'Poppins SemiBold', sans-serif;
   font-size: var(--text-s);
-  font-weight: 700;
 }
 
 h5,
