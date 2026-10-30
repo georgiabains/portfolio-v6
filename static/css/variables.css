@@ -162,7 +162,7 @@ html[data-theme="light system"] {
     --color-link: var(--color-primary-7);
     --color-link-background: transparent;
     --color-link-background-hover: var(--color-primary-8);
-    --color-link-emphasis: var(--color-neutral-0);
+    --color-link-emphasis: var(--color-neutral-7);
     --color-link-hover: var(--color-neutral-0);
 
     --color-text: var(--color-neutral-8);
