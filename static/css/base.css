@@ -66,7 +66,7 @@ h5,
 h6,
 .h6 {
   color: var(--color-text-deemphasis);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Instrument Serif', serif;
   font-weight: 400;
   margin-block-end: var(--spacing-xs);
   margin-block-start: var(--spacing-xl);
