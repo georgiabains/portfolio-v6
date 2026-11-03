@@ -49,6 +49,22 @@
 
         @font-face {
           font-display: swap;
+          font-family: "Atkinson Hyperlegible Mono";
+          src:
+            local("Atkinson Hyperlegible Mono"),
+            url("{{ get_url(path='fonts/atkinson-hyperlegible-mono/AtkinsonHyperlegibleMono-Regular.woff2', trailing_slash=false) | safe }}") format("woff2-variations");
+        }
+
+        @font-face {
+          font-display: swap;
+          font-family: "Atkinson Hyperlegible Mono VF";
+          src:
+            local("Atkinson Hyperlegible Mono VF"),
+            url("{{ get_url(path='fonts/atkinson-hyperlegible-mono/AtkinsonHyperlegibleMono-VariableFont_wght.woff2', trailing_slash=false) | safe }}") format("woff2-variations");
+        }
+
+        @font-face {
+          font-display: swap;
           font-family: "Instrument Serif";
           src:
             local("Instrument Serif"),
