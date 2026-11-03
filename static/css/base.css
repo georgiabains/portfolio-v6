@@ -5,13 +5,13 @@
 html,
 body {
   background-color: var(--color-background);
+  color: var(--color-text);
   font-size: 1em;
   margin: 0;
   padding: 0;
 }
 
 body {
-  color: var(--color-text);
   font-family: 'Atkinson Hyperlegible', sans-serif;
   font-weight: 400;
   line-height: var(--line-default);
@@ -23,7 +23,7 @@ p {
 }
 
 a {
-  border-bottom: 2px solid var(--color-link);
+  border-bottom: 1px solid var(--color-link);
   color: var(--color-link);
   text-decoration: none;
   
@@ -31,7 +31,7 @@ a {
   &:focus {
     background-color: var(--color-link-background-hover);
     border-color: var(--color-link-background-hover);
-    border-radius: var(--border-radius-s);
+    border-radius: var(--border-radius-xs);
     color: var(--color-link-hover);
 
     code {
