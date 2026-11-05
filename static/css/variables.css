@@ -68,7 +68,7 @@
    * Text sizes.
    */
   --text-base: 1rem; /* 16px */
-  --typescale-ratio: 1.333; /* Perfect third */
+  --typescale-ratio: 1.414; /* Augmented fourth */
 
   --text-xs: calc(var(--text-base) / var(--typescale-ratio));
   --text-s: var(--text-base);
