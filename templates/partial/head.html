@@ -36,8 +36,8 @@
 
     {% block css %}
       <link rel="preload" href="{{ get_url(path='fonts/atkinson-hyperlegible-next/AtkinsonHyperlegibleNext-Regular.woff2', trailing_slash=false) | safe }}" as="font" type="font/woff2" crossorigin="anonymous">
-      <link rel="preload" href="{{ get_url(path='fonts/instrument-serif/InstrumentSerif-Regular.woff2', trailing_slash=false) | safe }}" as="font" type="font/woff2" crossorigin="anonymous">
-    
+      <link rel="preload" href="{{ get_url(path='fonts/libre-caslon-condensed/LibreCaslonCondensed-Regular.woff2', trailing_slash=false) | safe }}" as="font" type="font/woff2" crossorigin="anonymous">
+
       <style>
         @font-face {
           font-display: swap;
@@ -73,10 +73,18 @@
 
         @font-face {
           font-display: swap;
-          font-family: "Instrument Serif";
+          font-family: "Libre Caslon Condensed";
           src:
-            local("Instrument Serif"),
-            url("{{ get_url(path='fonts/instrument-serif/InstrumentSerif-Regular.woff2', trailing_slash=false) | safe }}") format("woff2");
+            local("Libre Caslon Condensed"),
+            url("{{ get_url(path='fonts/libre-caslon-condensed/LibreCaslonCondensed-Regular.woff2', trailing_slash=false) | safe }}") format("woff2");
+        }
+
+        @font-face {
+          font-display: swap;
+          font-family: "Libre Caslon Condensed VF";
+          src:
+            local("Libre Caslon Condensed VF"),
+            url("{{ get_url(path='fonts/libre-caslon-condensed/LibreCaslonCondensed-VariableFont_wght.woff2', trailing_slash=false) | safe }}") format("woff2-variations");
         }
       </style>
       

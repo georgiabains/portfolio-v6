@@ -15,4 +15,4 @@ I built this site on [Zola](https://www.getzola.org/), a Rust-based Static Site 
 ## Typography
 Paragraphs use [Atkinson Hyperlegible Next](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next) and code snippets use [Atkinson Hyperlegible Mono](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Mono), both of which are fonts created by the [Braille Institute](https://www.brailleinstitute.org/freefont/). 
 
-Headings use [Instrument Serif](https://fonts.google.com/specimen/Instrument+Serif?preview.script=Latn).
+Headings use [Libre Caslon Condensed](https://fonts.google.com/specimen/Libre+Caslon+Condensed).
