@@ -35,16 +35,24 @@
     <meta name="description" content="{{ description | safe }}">
 
     {% block css %}
-      <link rel="preload" href="{{ get_url(path='fonts/atkinson-hyperlegible/AtkinsonHyperlegible-Regular.woff2', trailing_slash=false) | safe }}" as="font" type="font/woff2" crossorigin="anonymous">
+      <link rel="preload" href="{{ get_url(path='fonts/atkinson-hyperlegible-next/AtkinsonHyperlegibleNext-Regular.woff2', trailing_slash=false) | safe }}" as="font" type="font/woff2" crossorigin="anonymous">
       <link rel="preload" href="{{ get_url(path='fonts/instrument-serif/InstrumentSerif-Regular.woff2', trailing_slash=false) | safe }}" as="font" type="font/woff2" crossorigin="anonymous">
     
       <style>
         @font-face {
           font-display: swap;
-          font-family: "Atkinson Hyperlegible";
+          font-family: "Atkinson Hyperlegible Next";
           src:
-            local("Atkinson Hyperlegible"),
-            url("{{ get_url(path='fonts/atkinson-hyperlegible/AtkinsonHyperlegible-Regular.woff2', trailing_slash=false) | safe }}") format("woff2");
+            local("Atkinson Hyperlegible Next"),
+            url("{{ get_url(path='fonts/atkinson-hyperlegible-next/AtkinsonHyperlegibleNext-Regular.woff2', trailing_slash=false) | safe }}") format("woff2");
+        }
+
+        @font-face {
+          font-display: swap;
+          font-family: "Atkinson Hyperlegible Next VF";
+          src:
+            local("Atkinson Hyperlegible Next VF"),
+            url("{{ get_url(path='fonts/atkinson-hyperlegible-next/AtkinsonHyperlegibleNext-VariableFont_wght.woff2', trailing_slash=false) | safe }}") format("woff2-variations");
         }
 
         @font-face {

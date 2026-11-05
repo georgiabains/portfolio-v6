@@ -12,9 +12,14 @@ body {
 }
 
 body {
-  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-family: 'Atkinson Hyperlegible Next', sans-serif;
+  font-variation-settings: "wght" 375;
   font-weight: 400;
   line-height: var(--line-default);
+
+  @supports (font-variation-settings: normal) {
+    font-family: 'Atkinson Hyperlegible Next VF', sans-serif;
+  }
 }
 
 li,

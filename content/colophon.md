@@ -13,6 +13,6 @@ All multi-line syntax highlighting is [Github Dark High Contrast](https://github
 I built this site on [Zola](https://www.getzola.org/), a Rust-based Static Site Generator (SSG). It's hosted on [Cloudflare Pages](https://pages.cloudflare.com/).
 
 ## Typography
-Paragraphs use [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible) and code snippets use [Atkinson Hyperlegible Mono](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Mono), both of which are fonts created by the [Braille Institute](https://www.brailleinstitute.org/freefont/). 
+Paragraphs use [Atkinson Hyperlegible Next](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next) and code snippets use [Atkinson Hyperlegible Mono](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Mono), both of which are fonts created by the [Braille Institute](https://www.brailleinstitute.org/freefont/). 
 
 Headings use [Instrument Serif](https://fonts.google.com/specimen/Instrument+Serif?preview.script=Latn).
