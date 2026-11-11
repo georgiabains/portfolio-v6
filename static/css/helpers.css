@@ -73,6 +73,7 @@
 
 .text--lighter {
   color: var(--color-text-deemphasis);
+  font-variation-settings: "wght" 325;
 }
 
 section {

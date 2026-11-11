@@ -5,16 +5,21 @@
 html,
 body {
   background-color: var(--color-background);
+  color: var(--color-text);
   font-size: 1em;
   margin: 0;
   padding: 0;
 }
 
 body {
-  color: var(--color-text);
-  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-family: 'Atkinson Hyperlegible Next', sans-serif;
+  font-variation-settings: "wght" 375;
   font-weight: 400;
   line-height: var(--line-default);
+
+  @supports (font-variation-settings: normal) {
+    font-family: 'Atkinson Hyperlegible Next VF', sans-serif;
+  }
 }
 
 li,
@@ -23,7 +28,7 @@ p {
 }
 
 a {
-  border-bottom: 2px solid var(--color-link);
+  border-bottom: 1px solid var(--color-link);
   color: var(--color-link);
   text-decoration: none;
   
@@ -31,7 +36,7 @@ a {
   &:focus {
     background-color: var(--color-link-background-hover);
     border-color: var(--color-link-background-hover);
-    border-radius: var(--border-radius-s);
+    border-radius: var(--border-radius-xs);
     color: var(--color-link-hover);
 
     code {
@@ -66,13 +71,17 @@ h5,
 h6,
 .h6 {
   color: var(--color-text-deemphasis);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Libre Caslon Condensed', Georgia, serif;
   font-weight: 400;
   margin-block-end: var(--spacing-xs);
   margin-block-start: var(--spacing-xl);
 
   &:target {
     scroll-margin-block: var(--spacing-l);
+  }
+
+  @supports (font-variation-settings: normal) {
+    font-family: 'Libre Caslon Condensed VF', Georgia, serif;
   }
 }
 
@@ -98,19 +107,19 @@ h3,
 
 h4,
 .h4 {
-  font-family: 'Poppins SemiBold', sans-serif;
-  font-size: var(--text-s);
+  font-size: var(--text-m);
+  font-style: italic;
 }
 
 h5,
 .h5 {
   font-size: var(--text-s);
-  font-style: italic;
 }
 
 h6,
 .h6 {
-  font-size: var(--text-xs);
+  font-size: var(--text-s);
+  font-style: italic;
 }
 
 strong {
@@ -132,7 +141,13 @@ code {
   background-color: var(--color-background-deemphasis);
   border-radius: var(--border-radius-s);
   padding-inline: var(--spacing-2xs);
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
   font-size: var(--text-xs);
+  font-variation-settings: "wght" 350;
+
+  @supports (font-variation-settings: normal) {
+    font-family: 'Atkinson Hyperlegible Mono VF', monospace;
+  }
 }
 
 pre {
@@ -144,7 +159,8 @@ pre {
   white-space: pre-wrap;
 
   code {
-    all: unset;
+    background: none;
+    border: none;
   }
 }
 

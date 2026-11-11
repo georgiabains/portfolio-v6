@@ -8,6 +8,7 @@
   /**
    * Border radii.
    */
+  --border-radius-xs: 0.125rem; /* 2px */
   --border-radius-s: 0.25rem; /* 4px */
   --border-radius-m: 0.5rem; /* 8px */
   --border-radius-l: 1rem; /* 16px */
@@ -67,7 +68,7 @@
    * Text sizes.
    */
   --text-base: 1rem; /* 16px */
-  --typescale-ratio: 1.2; /* Minor third */
+  --typescale-ratio: 1.333; /* Perfect fourth */
 
   --text-xs: calc(var(--text-base) / var(--typescale-ratio));
   --text-s: var(--text-base);
@@ -139,7 +140,7 @@ html[data-theme="light system"] {
   --color-link-hover: var(--color-neutral-0);
 
   --color-text: var(--color-neutral-8);
-  --color-text-deemphasis: var(--color-neutral-7);
+  --color-text-deemphasis: var(--color-neutral-6);
   --color-text-emphasis: var(--color-neutral-9);
 
   img {
@@ -162,7 +163,7 @@ html[data-theme="light system"] {
     --color-link: var(--color-primary-7);
     --color-link-background: transparent;
     --color-link-background-hover: var(--color-primary-8);
-    --color-link-emphasis: var(--color-neutral-0);
+    --color-link-emphasis: var(--color-neutral-7);
     --color-link-hover: var(--color-neutral-0);
 
     --color-text: var(--color-neutral-8);
